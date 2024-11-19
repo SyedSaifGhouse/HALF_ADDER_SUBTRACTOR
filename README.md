@@ -62,12 +62,38 @@ HALF SUBTRACTOR
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
+ PROGRAM CODE
+ i)HALF ADDER
+
+module ha(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum= (a ^ b);
+assign carry= ( a & b);
+endmodule
+
+ii)HALF SUBTRACTOR
+
+module hs(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference= (a ^ b);
+assign borrow= ( ~a & b);
+endmodule
+
 Developed by: RegisterNumber: 24009014
+
 **RTL Schematic**
 
 RTL SCHEMATIC FOR HALF ADDER
 
 ![Screenshot 2024-11-12 051740](https://github.com/user-attachments/assets/a0e92d95-38ed-4164-a77e-83b72505b437)
+
+**Output/TIMING Waveform**
+
+TIMING FOR HALF ADDER
+
+![Screenshot 2024-11-12 054159](https://github.com/user-attachments/assets/092ac5af-4ce9-494a-a753-29d9da9021fe)
 
 
 RTL SCHEMATIC FOR HALF SUBTRACTOR
@@ -76,11 +102,6 @@ RTL SCHEMATIC FOR HALF SUBTRACTOR
 
 
 **Output/TIMING Waveform**
-
-TIMING FOR HALF ADDER
-
-![Screenshot 2024-11-12 054159](https://github.com/user-attachments/assets/092ac5af-4ce9-494a-a753-29d9da9021fe)
-
 
 TIMING WAVEFORM FOR HALF SUBTRACTOR
 
